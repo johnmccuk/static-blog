@@ -31,9 +31,9 @@ extra:
       link: 'https://twitter.com/johnmccuk'
 
 # Google Analytics
-# google_analytics:
-#  - 'UA-XXXXXXXX-X'
-#  - 'auto'
+google_analytics:
+  - 'UA-87654290-1'
+  - 'auto'
 
 # Pages
 pages:
