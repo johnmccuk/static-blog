@@ -17,7 +17,7 @@ theme:
   logo:
     icon: 'code'
   palette:
-    primary: 'grey'
+    primary: 'red'
     accent: 'red'
 
 # Customization
