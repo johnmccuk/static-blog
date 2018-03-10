@@ -15,7 +15,7 @@ copyright: 'Copyright &copy; 2018 John McCracken'
 theme:
   name: 'material'
   logo:
-    icon: 'code'
+    icon: 'language'
   palette:
     primary: 'red'
     accent: 'red'
