@@ -1,6 +1,6 @@
 # **Hello World** Software Development and Tech Blog
 
-## Latest posts:
+## Latest posts
 
 * [Isolating PHP with Docker Containers](IsolatingPHPwithDockerContainers.md)
 * [Test Driven Development Mentality](TestDrivenDevelopmentMentality.md)
@@ -19,6 +19,10 @@ I'm currently gravitating towards Python as my favoured language.
 Pretty comfortable with Javascript on the frontend, having worked with JQuery, Angular and some React. Knowledge of most databases and key/value store technologies, although I prefer MySQL and ElasticSearch.
 
 Apple fanboy all the way, but happy with anything thats not Windows. Feel free to connect on [LinkedIn](https://uk.linkedin.com/in/john-mccracken-025846a5) or [Twitter](https://twitter.com/johnmccuk).
+
+## Resume
+
+If you feel the urge, heres a pdf of my <a href="./files/JohnMccrackenCV.pdf" target="new">Resume</>.
 
 
 
