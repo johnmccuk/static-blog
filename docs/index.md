@@ -22,7 +22,4 @@ Apple fanboy all the way, but happy with anything thats not Windows. Feel free t
 
 ## Resume
 
-If you feel the urge, heres a pdf of my <a href="./files/JohnMccrackenCV.pdf" target="new">Resume</>.
-
-
-
+If you feel the urge, heres a pdf of my <a href="./files/JohnMccrackenCV.pdf" target="new">Resume</a>.
