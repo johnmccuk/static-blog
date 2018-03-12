@@ -5,8 +5,8 @@ site_author: 'John McCracken'
 site_url: 'https://blog.john-mccracken.com/'
 
 # Repository
-repo_name: 'johnmccuk/static-blog'
-repo_url: 'https://github.com/johnmccuk/static-blog'
+#repo_name: 'johnmccuk/static-blog'
+#repo_url: 'https://github.com/johnmccuk/static-blog'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 John McCracken'
