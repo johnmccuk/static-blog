@@ -20,7 +20,7 @@ Begin by creating a folder and navigating into it. Then run the following comman
 
 `npm init`
 
-Accept all defaults and you should have a new ==package.json== file. This is our Node config file, all installed modules will be listed in here.
+Accept all defaults and you should have a new *package.json* file. This is our Node config file, all installed modules will be listed in here.
 
 Next we need to install Webpack itself.
 
@@ -28,7 +28,7 @@ Next we need to install Webpack itself.
 
 You should see some warnings which you will become accustomed to, npm does like to grumble. As long as there are no errors, you should see a tree of installed libraries and dependancies. If you look inside the package.json file, you should a dependency entry for Webpack.
 
-We should now setup a config file for Webpack called ==webpack.config.js==. Add the following text.
+We should now setup a config file for Webpack called *webpack.config.js*. Add the following text.
 
 ```
 //Define what libraries we need
@@ -52,15 +52,15 @@ var config = {
 module.exports = config;
 ```
 
-It should be fairly obvious from looking over the above config that were taking a javascript file called ==start.js== in the input directory, which will then be compiled to ==finish.js== in the output directory.
+It should be fairly obvious from looking over the above config that were taking a javascript file called *start.js* in the input directory, which will then be compiled to *finish.js* in the output directory.
 
-So to begin with we need to create input and output directories. We should also create a ==start.js== file within the input directory, write the following into it: 
+So to begin with we need to create input and output directories. We should also create a *start.js* file within the input directory, write the following into it: 
 
 `alert('hello world');`. 
 
 You could replace the `alert()` with `console.log` if your feeling that way inclined.
 
-We'll also need a main html page to see if all this is working, so in the main folder create ==index.html== and add the following:
+We'll also need a main html page to see if all this is working, so in the main folder create *index.html* and add the following:
 
 ```
 <html>
@@ -89,9 +89,9 @@ finish.js  1.41 kB       0  [emitted]  main
    [0] ./input/start.js 21 bytes {0} [built]
 ```
 
-To make sure all's well, open the ==index.html== file in your browser (double clicking it is probably the easiest way), you should get a 'hello world' popup message.
+To make sure all's well, open the *index.html* file in your browser (double clicking it is probably the easiest way), you should get a 'hello world' popup message.
 
-And if you check in the output folder, there should now be a ==finish.js== file. This file contains lots of additional code we didn't actually type. The good thing is, we don't need to understand it, we can assume Webpack has worked its magical goodness on it and it all just works.
+And if you check in the output folder, there should now be a *finish.js* file. This file contains lots of additional code we didn't actually type. The good thing is, we don't need to understand it, we can assume Webpack has worked its magical goodness on it and it all just works.
 
 Right now, its not really doing a great deal other than taking our Javascript, adding lots of extra code and creating a new file. This now allows to do clever things to our code, we can now write shiny new ES6 javascript with all its new features, and all these features will work in the browser even if its not ES6 compatible. We use the compiler Babel.js to achieve this.
 
@@ -100,13 +100,13 @@ If we want to add source maps to our output, run the following
 
 `./node_modules/.bin/webpack -d`
 
-A source map should now have been created called ==finish.js.map==. This does have the disadvantage of taking longer for Webpack to package and output our specified files.
+A source map should now have been created called *finish.js.map*. This does have the disadvantage of taking longer for Webpack to package and output our specified files.
 
 ##ES6
 
 `npm install babel-loader babel-preset-es2015 --save`
 
-Again lots of warnings, but if theres no errors, who cares! We'll need a config file for Babel also, so create ==.babelrc== and add the following:
+Again lots of warnings, but if theres no errors, who cares! We'll need a config file for Babel also, so create *.babelrc* and add the following:
 
 ```
 {
@@ -114,7 +114,7 @@ Again lots of warnings, but if theres no errors, who cares! We'll need a config 
 }
 ```
 
-We next need to inform Webpack to process our code using babel, so in ==webpack.config.js== add a module object to the config object
+We next need to inform Webpack to process our code using babel, so in *webpack.config.js* add a module object to the config object
 
 ```
 //create a config object
@@ -141,7 +141,7 @@ var config = {
 
 The loaders section is an array of modules that we can run our files through, if the file matches the test condition, we can process it through the module.
 
-Edit the ==start.js== file and replace the content with this:
+Edit the *start.js* file and replace the content with this:
 
 ```
 //constants are an ES6 feature and wont run in plain old js
@@ -153,9 +153,9 @@ now run Webpack to see if it works
 
 `./node_modules/.bin/webpack`
 
-Open ==index.html== in your browser, you should have an annoying alert notifying you of the value of Pi!
+Open *index.html* in your browser, you should have an annoying alert notifying you of the value of Pi!
 
-If you look at the ==finish.js== file, at the very end you'll see:
+If you look at the *finish.js* file, at the very end you'll see:
 
 ```
 "use strict";
@@ -168,7 +168,7 @@ alert(PI);
 From this we can see that Babel has converted our code into bog standard Javascript, but we can still get the benefits of ES6 while coding, nice!
 
 ##Minify
-Lets now minify/uglify this code. This is a builtin plugin for Webpack, so we just need to edit ==webpack.config.js== to tell Webpack to use it. Update the config object to the following:
+Lets now minify/uglify this code. This is a builtin plugin for Webpack, so we just need to edit *webpack.config.js* to tell Webpack to use it. Update the config object to the following:
 
 ```
 //create a config object
@@ -200,14 +200,14 @@ var config = {
 };
 ```
 
-Again run `./node_modules/.bin/webpack` and check all works. If we look at the ==finish.js== file we can see its now been minifed.
+Again run `./node_modules/.bin/webpack` and check all works. If we look at the *finish.js* file we can see its now been minifed.
 
 ##Watch for Changes
 So we now have a reasonably straightforward process of taking our code and manipulating it dependant on the plugins/loaders used. This is brilliant, but it would be nicer to have it done automatically rather than having to run a command every time. To achieve this we just need to add the --watch parameter:
 
 `./node_modules/.bin/webpack --watch`
 
-If we now edit the ==start.js== file to the following.
+If we now edit the *start.js* file to the following.
 
 ```
 //constants are an ES6 feature and wont run in plain old js
@@ -221,7 +221,7 @@ To cancel the watch process hit `ctrl+c`.
 
 ##Task Runners
 
-We can also use npm as a task runner, this makes life easier since we don't need to remember any complex command lines. Edit the ==package.json== file
+We can also use npm as a task runner, this makes life easier since we don't need to remember any complex command lines. Edit the *package.json* file
 
 ```
 ...
@@ -239,7 +239,7 @@ now we can run the following commands `npm run build` and `npm run watch` rather
 
 `npm install webpack-dev-server --save`
 
-This installs our development server, blissfully ignore the normal npm warnings. Now edit the ==package.json== file and add another task runner called 'server'.
+This installs our development server, blissfully ignore the normal npm warnings. Now edit the *package.json* file and add another task runner called 'server'.
 
 ```
 ...
